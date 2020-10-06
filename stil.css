@@ -1,0 +1,80 @@
+html, body, div, section, article, aside, main, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr
+{
+margin: 0;
+padding: 0;
+border: 0;
+}
+address, article, aside, main, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary
+{
+display: block;
+}
+body {
+	width: 780px;
+	margin-left: auto;   
+	margin-right: auto; 
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border: solid 2px lightblue;
+	background-color: white;
+	box-shadow: 5px 5px 5px;
+}
+header {
+	width: 780px;
+}
+#bilde { 
+	width: 780px;
+	float: left;
+}
+nav {
+	width: 780px;
+	background-color: rgb(66, 62, 62); 
+}
+.knapp { 
+	display: inline-block;  
+	text-align: center;
+	width: 142.81px;
+	padding: 5px;
+	text-decoration: none; 
+	color: black;  
+	background-color: rgb(102,102,102); 
+	font-weight: bold;    
+	cursor: pointer;
+}
+.knapp:hover {   
+	background-color: lightyellow;
+}
+html {
+	background-image: url(bakgrunn.jpg);
+}
+main {
+	margin-left: 5px;
+	width: 475px;
+	float: left;
+	text-align: left;
+}
+aside {
+	width: 300px;
+	float: right;
+}
+#bilde1{
+	width: 275px;
+	border: solid 2px lightblue;
+	margin-top: 5px;
+	margin-left: 10px;
+} 
+
+footer {
+	clear: both;
+	background-color: rgb(102,102,102);
+	text-shadow: 1px 1px 1px;
+}
+h2 {
+	color: rgb(105, 8, 8);
+}
+p {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#bilde {
+	height: 250px;
+}
