@@ -5,14 +5,9 @@
 		<meta charset="utf-8" />   
         <link rel="stylesheet" type="text/css" href="stil.css" />
         <script>
-            window.onload = oppstart;
             
             var spmSvar = [];
             var antallRiktig = 0;
-
-            function oppstart () {
-                document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
-            }
 
             function check() {
                 spmSvar[0] = document.getElementsById("spm1").value;
