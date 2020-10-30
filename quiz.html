@@ -5,28 +5,36 @@
 		<meta charset="utf-8" />   
         <link rel="stylesheet" type="text/css" href="stil.css" />
         <script>
+            window.onload = oppstart;
+            
+            var spmSvar = [];
+            var antallRiktig = 0;
+
+            function oppstart () {
+                document.getElementById("check_button").onclick = sjekk;
+            }
+
             function check() {
                 var c = 0;
-                var spm1 = document.quiz.spm1.value;
-                var spm2 = document.quiz.spm2.value;
-                var spm3 = document.quiz.spm3.value;
-                var spm4 = document.quiz.spm4.value;
-                var spm5 = document.quiz.spm5.value;
-                var spm6 = document.quiz.spm6.value;
-                var spm7 = document.quiz.spm7.value;
-                var spm8 = document.quiz.spm8.value;
-                var resultat=document.getElementById("resultat");
+                spmSvar[0] = document.quiz.spm1.value;
+                spmSvar[1] = document.quiz.spm2.value;
+                spmSvar[2] = document.quiz.spm3.value;
+                spmSvar[3] = document.quiz.spm4.value;
+                spmSvar[4] = document.quiz.spm5.value;
+                spmSvar[5] = document.quiz.spm6.value;
+                spmSvar[6] = document.quiz.spm7.value;
+                spmSvar[7] = document.quiz.spm8.value;
+                spmSvar[8] = document.quiz.spm8.value;
+                spmSvar[9] = document.quiz.spm8.value;
+                
+                var fasit = [4, 1, 2, 1, 1, 2, 2, 3, 4, 3];
 
-                if (spm1 == "alt_1") {c++}
-                if (spm2 == "alt_3") {c++}
-                if (spm3 == "alt_2") {c++}
-                if (spm4 == "alt_1") {c++}
-                if (spm5 == "alt_4") {c++}
-                if (spm6 == "alt_3") {c++}
-                if (spm7 == "alt_2") {c++}
-                if (spm8 == "alt_4") {c++}
-
-                resultat.textContent=`${c}`;
+                for (let i = 0; i < 10; i++) {
+                    if (spmSvar[i] = fasit[i]) {
+                        antallRiktig++;
+                    }
+                }
+                document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
             }
         </script>
 	</head>
@@ -42,32 +50,32 @@
 		<main>
 			<div>
                 <p>How often do you change your password?</p>
-                <p><input type="radio" name="spm1" value="alt_1"> A. never</p>
-                <p><input type="radio" name="spm1" value="alt_2"> B. Once every two weeks</p>
-                <p><input type="radio" name="spm1" value="alt_3"> C. Once a month</p>
-                <p><input type="radio" name="spm1" value="alt_4"> D. Just have a good password</p>
+                <p><input type="radio" name="spm1" value="1"> A. Never</p>
+                <p><input type="radio" name="spm1" value="2"> B. Once every two weeks</p>
+                <p><input type="radio" name="spm1" value="3"> C. Once a month</p>
+                <p><input type="radio" name="spm1" value="4"> D. I just have a good and complex password</p>
             </div>
             <br>
             <div>
                 <p>Do you use 2 factor authentication on your accounts?</p>
-                <p><input type="radio" name="spm2" value="alt_1"> A. yes</p>
-                <p><input type="radio" name="spm2" value="alt_2"> B. no</p>
+                <p><input type="radio" name="spm2" value="1"> A. yes</p>
+                <p><input type="radio" name="spm2" value="2"> B. no</p>
             </div>
             <br>
             <div>
                 <p>Do you know what a phishing attack is?</p>
-                <p><input type="radio" name="spm3" value="alt_1"> A. A computer program tries to "guess" your password. </p>
-                <p><input type="radio" name="spm3" value="alt_2"> B. A malicious email that tries to get your sensitive information</p>
-                <p><input type="radio" name="spm3" value="alt_3"> C. Alt 1</p>
-                <p><input type="radio" name="spm3" value="alt_4"> D. Alt 1</p>
+                <p><input type="radio" name="spm3" value="1"> A. A computer program tries to "guess" your password. </p>
+                <p><input type="radio" name="spm3" value="2"> B. A malicious email that tries to get your sensitive information</p>
+                <p><input type="radio" name="spm3" value="3"> C. Someone stole your computer and uses it to get your files</p>
+                <p><input type="radio" name="spm3" value="4"> D. A program that deletes all your files on the computer </p>
             </div>
             <br>
             <div>
                 <p>What is most secure between http and https </p>
-                <p><input type="radio" name="spm4" value="alt_1"> A. Https is most secure</p>
-                <p><input type="radio" name="spm4" value="alt_2"> B. Http is most secure</p>
-                <p><input type="radio" name="spm4" value="alt_3"> C. They have the same security</p>
-                <p><input type="radio" name="spm4" value="alt_4"> D. </p>
+                <p><input type="radio" name="spm4" value="1"> A. Https is most secure</p>
+                <p><input type="radio" name="spm4" value="2"> B. Http is most secure</p>
+                <p><input type="radio" name="spm4" value="3"> C. They have the same security</p>
+                <p><input type="radio" name="spm4" value="4"> D. None of them are secure </p>
             </div>
             <br>
             <div>
@@ -75,7 +83,7 @@
                 <p><input type="radio" name="spm5" value="alt_1"> A. By hovering over the name of the sender's email to see where the email was sent from.</p>
                 <p><input type="radio" name="spm5" value="alt_2"> B. The email has an attachment to it.</p>
                 <p><input type="radio" name="spm5" value="alt_3"> C. The email was sorted into the junk folder.</p>
-                <p><input type="radio" name="spm5" value="alt_4"> D. Alt 1</p>
+                <p><input type="radio" name="spm5" value="alt_4"> D. You do not know the person who sent the email.</p>
             </div>
             <br>
             <div>
@@ -91,33 +99,33 @@
                 <p><input type="radio" name="spm7" value="alt_1"> A. Pay the money so it goes away.</p>
                 <p><input type="radio" name="spm7" value="alt_2"> B. You should never pay the ransom.</p>
                 <p><input type="radio" name="spm7" value="alt_3"> C. Call the police</p>
-                <p><input type="radio" name="spm7" value="alt_4"> D. ignore the email completely</p>
+                <p><input type="radio" name="spm7" value="alt_4"> D. Ignore the email completely</p>
             </div>
             <br>
             <div>
                 <p>8. What is malware?</p>
-                <p><input type="radio" name="spm8" value="alt_1"> A. A program that is designed to damage your computer</p>
+                <p><input type="radio" name="spm8" value="alt_1"> A. </p>
                 <p><input type="radio" name="spm8" value="alt_2"> B. Alt 1</p>
-                <p><input type="radio" name="spm8" value="alt_3"> C. Alt 1</p>
+                <p><input type="radio" name="spm8" value="alt_3"> C. A program that is designed to damage your computer</p>
                 <p><input type="radio" name="spm8" value="alt_4"> D. Alt 1</p>
             </div>
             <br>
             <div>
                 <p>9. How do you protect yourself from cybersecurity treats</p>
-                <p><input type="radio" name="spm8" value="alt_1"> A. Alt 1</p>
-                <p><input type="radio" name="spm8" value="alt_2"> B. Alt 1</p>
+                <p><input type="radio" name="spm8" value="alt_1"> A.  </p>
+                <p><input type="radio" name="spm8" value="alt_2"> B. Just use a antivirus and you are protected from harm</p>
                 <p><input type="radio" name="spm8" value="alt_3"> C. Alt 1</p>
-                <p><input type="radio" name="spm8" value="alt_4"> D. Alt 1</p>
+                <p><input type="radio" name="spm8" value="alt_4"> D. Be aware of what you are doing online and always double check if the website or files is trusworthy.</p>
             </div>
             <br>
             <div>
                 <p>10.Why should you use a VPN </p>
                 <p><input type="radio" name="spm8" value="alt_1"> A. Alt 1</p>
-                <p><input type="radio" name="spm8" value="alt_2"> B. Alt 1</p>
-                <p><input type="radio" name="spm8" value="alt_3"> C. Alt 1</p>
+                <p><input type="radio" name="spm8" value="alt_2"> B. </p>
+                <p><input type="radio" name="spm8" value="alt_3"> C. It masks your identity and location online</p>
                 <p><input type="radio" name="spm8" value="alt_4"> D. Alt 1</p>
             </div>
-            <input type="button" id=check_button onclick="check()" value="I'm done"></input>
+            <input type="button" id=check_button value="I'm done"></input>
             <p id=resultat></p>
 		</main>
 		<aside> 
