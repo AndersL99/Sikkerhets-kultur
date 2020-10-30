@@ -4,7 +4,31 @@
 		<title>Quiz</title> 
 		<meta charset="utf-8" />   
         <link rel="stylesheet" type="text/css" href="stil.css" />
-        <script src="quiz.js"></script>
+        <script>
+            function check() {
+                var c = 0;
+                var spm1 = document.quiz.spm1.value;
+                var spm2 = document.quiz.spm2.value;
+                var spm3 = document.quiz.spm3.value;
+                var spm4 = document.quiz.spm4.value;
+                var spm5 = document.quiz.spm5.value;
+                var spm6 = document.quiz.spm6.value;
+                var spm7 = document.quiz.spm7.value;
+                var spm8 = document.quiz.spm8.value;
+                var resultat=document.getElementById("resultat");
+
+                if (spm1 == "alt_1") {c++}
+                if (spm2 == "alt_3") {c++}
+                if (spm3 == "alt_2") {c++}
+                if (spm4 == "alt_1") {c++}
+                if (spm5 == "alt_4") {c++}
+                if (spm6 == "alt_3") {c++}
+                if (spm7 == "alt_2") {c++}
+                if (spm8 == "alt_4") {c++}
+
+                resultat.textContent=`${c}`;
+            }
+        </script>
 	</head>
 	<body>
 		<header> <img id="bilde" src="logo.jpg" alt="bilde"> </header>
@@ -28,8 +52,6 @@
                 <p>Do you use 2 factor authentication on your accounts?</p>
                 <p><input type="radio" name="spm2" value="alt_1"> A. yes</p>
                 <p><input type="radio" name="spm2" value="alt_2"> B. no</p>
-                <p><input type="radio" name="spm2" value="alt_3"> C.</p>
-                <p><input type="radio" name="spm2" value="alt_4"> D.</p>
             </div>
             <br>
             <div>
