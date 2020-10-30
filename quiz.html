@@ -24,12 +24,11 @@
                 spmSvar[6] = document.quiz.spm7.value;
                 spmSvar[7] = document.quiz.spm8.value;
                 spmSvar[8] = document.quiz.spm8.value;
-                spmSvar[9] = document.quiz.spm8.value;
                 
                 var fasit = [4, 1, 2, 1, 1, 2, 2, 3, 4, 3];
 
                 for (var i = 0; i < 10; i++) {
-                    if (spmSvar[i] = fasit[i]) {
+                    if (spmSvar[i] == fasit[i]) {
                         antallRiktig++;
                     }
                 }
