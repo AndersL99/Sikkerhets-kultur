@@ -12,6 +12,7 @@
 
             function oppstart () {
                 document.getElementById("check_button").onclick = check;
+                document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
             }
 
             function check() {
@@ -29,7 +30,7 @@
                 
                 var fasit = [4, 1, 2, 1, 1, 2, 2, 3, 4, 3];
 
-                for (let i = 0; i < 10; i++) {
+                for (var i = 0; i < 10; i++) {
                     if (spmSvar[i] = fasit[i]) {
                         antallRiktig++;
                     }
