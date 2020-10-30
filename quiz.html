@@ -12,6 +12,7 @@
 
             function oppstart () {
                 document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
+                document.getElementById("check_button").onclick = check;
             }
 
             function check() {
@@ -123,7 +124,7 @@
                 <p><input type="radio" name="spm8" value="3"> C. it makes it easier to shop online</p>
                 <p><input type="radio" name="spm8" value="4"> D. to make your computer run smother</p>
             </div>
-            <input type="button" onclick="check();" value="I'm done"></input>
+            <button id="check_button">I'm done</button>
             <p><span id="resultat"></span></p>
 		</main>
 		<aside> 
