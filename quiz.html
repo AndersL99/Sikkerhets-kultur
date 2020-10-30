@@ -11,7 +11,6 @@
             var antallRiktig = 0;
 
             function oppstart () {
-                document.getElementById("check_button").onclick = check;
                 document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
             }
 
@@ -125,7 +124,7 @@
                 <p><input type="radio" name="spm8" value="3"> C. it makes it easier to shop online</p>
                 <p><input type="radio" name="spm8" value="4"> D. to make your computer run smother</p>
             </div>
-            <input type="button" id="check_button" value="I'm done"></input>
+            <input type="button" onclick="check();" value="I'm done"></input>
             <p><span id="resultat"></span></p>
 		</main>
 		<aside> 
