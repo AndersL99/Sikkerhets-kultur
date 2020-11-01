@@ -5,9 +5,15 @@
 		<meta charset="utf-8" />   
         <link rel="stylesheet" type="text/css" href="stil.css" />
         <script>
-            
+        window.onload = oppstart;
+
+
         var antallRiktig = 0;
-        document.getElementById("videoKnapp").disabled = true;
+        
+
+        function oppstart() {
+            document.getElementById("videoKnapp").disabled = true;
+        }
 
         function check() {               
             for(var i = 1; i < 10; i++) {
@@ -22,6 +28,10 @@
             document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige"; 
             document.getElementById("checkKnapp").disabled = true;
             document.getElementById("videoKnapp").disabled = false;
+        }
+
+        function video() {
+            window.location="video.html"
         }
         </script>
 	</head>
@@ -114,7 +124,7 @@
             </div>
             <button id="checkKnapp" onclick="check()">I'm done</button>
             <p><span id="resultat"></span></p>
-            <button id="videoKnapp" href=video.html >Show video</button>
+            <button id="videoKnapp" onclick="video()" >Show video</button>
 		</main>
 		<aside> 
 		</aside>
