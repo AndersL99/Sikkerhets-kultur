@@ -7,7 +7,6 @@
         <script>
             
         var antallRiktig = 0;
-        var videoNr = [];
 
         function check() {               
             for(var i = 1; i < 10; i++) {
@@ -17,18 +16,13 @@
                     if(radio.value == "correct" && radio.checked) {
                     antallRiktig++;
                     }
-                    else {
-                        videoNr.push(i);
-                    }
                 }
             }                   
             document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
         }
 
         function video() {
-            for (var i = 0; i < videoNr.length; i++) {
-
-            }
+            
         }
         </script>
 	</head>
@@ -121,6 +115,7 @@
             </div>
             <button id="knapp" onclick="check()">I'm done</button>
             <p><span id="resultat"></span></p>
+            <button id="videoKnapp" onclick="video()" disabled="none">Show video</button>
 		</main>
 		<aside> 
 		</aside>
