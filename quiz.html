@@ -7,6 +7,7 @@
         <script>
             
         var antallRiktig = 0;
+        var videoNr = [];
 
         function check() {               
             for(var i = 1; i < 10; i++) {
@@ -16,9 +17,18 @@
                     if(radio.value == "correct" && radio.checked) {
                     antallRiktig++;
                     }
+                    else {
+                        videoNr.push(i);
+                    }
                 }
             }                   
             document.getElementById("resultat").innerHTML = "Du fikk " + antallRiktig + " antall riktige";
+        }
+
+        function video() {
+            for (var i = 0; i < videoNr.length; i++) {
+                                
+            }
         }
         </script>
 	</head>
@@ -26,9 +36,9 @@
 		<header> <img id="bilde" src="logo.jpg" alt="bilde"> </header>
 		<nav>
 			<a href=index.html class="knapp">Home</a>     
-			<a href="#Om oss"     class="knapp">Your resulst</a> 
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSfZZrmknIxo_weroFL_QmuYQDOsocllyEW3wNkFK3JswuLIRQ/viewform"     class="knapp">Servey</a> 
 			<a href="#Kontakt"    class="knapp">Highscores</a>  
-			<a href="#Blogg"    class="knapp">Statistics</a>
+			<a href="statestikk.html"    class="knapp">Statistics</a>
 			<a href=About_us.html    class="knapp">About us</a>  
 		</nav>
 		<main>
