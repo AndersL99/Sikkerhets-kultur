@@ -79,5 +79,6 @@ p {
 	height: 250px;
 }
 
-#statistikk {
+.statistikk {
+	width: 250px;
 }
