@@ -80,5 +80,6 @@ p {
 }
 
 .statistikk {
-	width: 600px;
+	width: 550px;
+	margin-left: 25px;
 }
